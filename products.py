@@ -1,4 +1,11 @@
-#
+import os #operating system
+
+if os.path.isfile('products.csv'):
+	print('yeah! found the file!')
+else:
+	print('cannot find the file......')
+
+#讀取檔案
 products = []
 with open('products.csv', 'r', encoding = 'utf-8') as f:
 	for line in f:
@@ -8,7 +15,7 @@ with open('products.csv', 'r', encoding = 'utf-8') as f:
 		products.append([name, price])
 print(products)
 
-#
+#讓使用者輸入
 while True:
 	name = input('請輸入商品名稱')
 	if name == "q":
